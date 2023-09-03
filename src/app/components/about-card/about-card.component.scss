@@ -1,0 +1,47 @@
+@import 'colors';
+
+img {
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
+.card-container {
+  border-radius: 0.5rem;
+  display: flex;
+}
+
+.image-container {
+  background-color: map-get($map: $dark-palette, $key: purple-pale);
+  padding: 0.25rem 0.25rem 0 0.25rem;
+}
+
+.image-container.left {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.image-container.right {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.text-container {
+  align-items: center;
+  display: flex;
+  background-color: map-get($map: $dark-palette, $key: purple);
+  // height: 100%;
+  padding: 0.5rem;
+  width: 400px;
+}
+
+.text-container.left {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.text-container.right {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}

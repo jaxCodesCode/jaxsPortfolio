@@ -1,0 +1,11 @@
+@import 'colors';
+
+button.link {
+  background-color: map-get($map: $dark-palette, $key: purple-pale);
+  margin: 0.5rem;
+}
+
+.link-text {
+  display: flex;
+  align-items: center;
+}

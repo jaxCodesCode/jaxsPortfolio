@@ -1,0 +1,15 @@
+@import 'colors';
+
+.icon-l {
+  color: map-get($map: $dark-palette, $key: grey);;
+  transform: scale(1.25);
+}
+
+.mat-mdc-icon-button {
+  transform: scale(1.25);
+  margin: 0 0.5rem;
+
+  .mat-mdc-button-ripple {
+    transform: scale(1.25);
+  }
+}

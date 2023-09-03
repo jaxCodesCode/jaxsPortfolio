@@ -1,0 +1,16 @@
+<div class="screen-container">
+  <p class="screen-header">Get In Touch</p>
+  <div class="contact-form-container">
+    <jax-input class="input" label="Name" (change)="this.formChange()"></jax-input>
+    <jax-input class="input" label="Email" (change)="this.formChange()"></jax-input>
+    <jax-textarea class="input" label="Message" (change)="this.formChange()"></jax-textarea>
+    <button class="submit-button" mat-raised-button (click)="submitForm()" [disabled]="!this.formValid()">Send an email</button>
+  </div>
+  <div class="socials-container">
+    <jax-download-button [fileName]="'jaxonHoffmanResume'"
+                        [label]="'My Resume'" 
+                        [path]="'/assets/files/resume.pdf'">
+    </jax-download-button>
+    <jax-socials></jax-socials>
+  </div>
+</div>

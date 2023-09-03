@@ -1,0 +1,13 @@
+<div class="card-container">
+  <div class="image-container left" [hidden]="!this.isLeftMode()">
+    <img *ngIf="this.getImgUrl()" [src]="this.getImgUrl()">
+    <ng-template *ngIf="component" [ngTemplateOutlet]="component"></ng-template>
+  </div>
+  <div class="text-container" [ngClass]="{left: this.isLeftMode(), right: !this.isLeftMode()}">
+    {{this.text}}
+  </div>
+  <div class="image-container right" [hidden]="this.isLeftMode()">
+    <img *ngIf="this.getImgUrl()" [src]="this.getImgUrl()">
+    <ng-template *ngIf="component" [ngTemplateOutlet]="component"></ng-template>
+  </div>
+</div>

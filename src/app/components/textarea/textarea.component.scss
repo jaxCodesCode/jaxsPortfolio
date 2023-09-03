@@ -1,0 +1,65 @@
+@import 'colors';
+
+.form {
+  position: relative;
+  height: 8rem;
+}
+
+.form-text-area {
+  background: none;
+  border: 2px solid map-get($map: $dark-palette, $key: grey);
+  border-radius: 0.25rem;
+  color: map-get($map: $dark-palette, $key: grey);
+  height: 100%;
+  left: 0;
+  outline: none;
+  padding: 1.25rem;
+  position: absolute;
+  resize: none;
+  top: 0;
+  transition: all 240ms ease-in;
+  width: 100%;
+}
+
+.form-text-area:hover {
+  border-color: map-get($map: $dark-palette, $key: tan-pale);
+}
+
+.form-text-area:hover ~ .form-label {
+  color: map-get($map: $dark-palette, $key: tan-pale);
+}
+
+.form-text-area:focus {
+  border-color: map-get($map: $dark-palette, $key: tan);
+  color: map-get($map: $dark-palette, $key: tan);
+}
+
+.form-text-area:focus ~ .form-label {
+  color: map-get($map: $dark-palette, $key: tan);
+}
+
+.form-text-area:focus ~ .form-label,
+.form-text-area:not(:placeholder-shown).form-text-area:not(:focus) ~ .form-label {
+  font-size: 0.8rem;
+  left: 0.8rem;
+  padding: 0 0.25rem;
+  top: -0.6rem;
+}
+
+.form-label {
+  background-color: map-get($map: $dark-palette, $key: purple-dark);
+  color: map-get($map: $dark-palette, $key: grey);
+  cursor: text;
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  transition: 
+    color 200ms ease-in,
+    top 200ms ease-in,
+    left 200ms ease-in,
+    font-size 200ms ease-in;
+}
+
+textarea::-webkit-scrollbar {
+  width: 0;
+}
