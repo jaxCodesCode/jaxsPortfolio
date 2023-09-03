@@ -1,0 +1,45 @@
+@import 'colors';
+
+.drawer-container {
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  overflow: hidden;
+  height: -webkit-fill-available;
+}
+
+.footer {
+  align-items: center;
+  align-self: center;
+  background-color: rgba($color: map-get($map: $dark-palette, $key: tan-pale), $alpha: 0.05);
+  border-radius: 0.5rem;
+  color: map-get($map: $dark-palette, $key: purple-pale);
+  display: flex;
+  justify-content: space-around;
+  padding: 0.5rem 0.25rem;
+  width: 100%;
+}
+
+.footer-text {
+  align-items: center;
+  display: flex; 
+  flex-direction: column;
+
+  .name {
+    font-size: 1.25rem;
+  }
+}
+
+.header {
+  align-items: center;
+  color: map-get($map: $dark-palette, $key: purple-pale);
+  display: flex;
+  font-size: 1.25rem;
+  justify-content: space-between;
+  padding: 0.5rem 0.25rem;
+
+  button {
+    align-self: flex-start;
+  }
+}

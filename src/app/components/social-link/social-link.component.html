@@ -1,0 +1,8 @@
+<a *ngIf="this.path" mat-icon-button [matTooltip]="this.tooltip" [href]="this.path" target="_blank">
+  <mat-icon *ngIf="this.svg" class="icon-l" [svgIcon]="this.svg"></mat-icon>
+  <mat-icon *ngIf="this.icon" class="icon-l">{{this.icon}}</mat-icon>
+</a>
+<button *ngIf="!this.path" mat-icon-button [matTooltip]="this.tooltip" (click)="this.click.emit()">
+  <mat-icon *ngIf="this.svg" class="icon-l" [svgIcon]="this.svg"></mat-icon>
+  <mat-icon *ngIf="this.icon" class="icon-l">{{this.icon}}</mat-icon>
+</button>

@@ -1,0 +1,5 @@
+<div class="form">
+  <input type="text" id="input" #input placeholder=" " 
+    autocomplete="off" class="form-input" (keyup)="this.change.emit()">
+  <label for="input" class="form-label">{{label}}</label>
+</div>

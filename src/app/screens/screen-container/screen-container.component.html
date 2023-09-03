@@ -1,0 +1,14 @@
+<mat-drawer-container class="drawer-container" autosize>
+  <mat-drawer #drawer class="drawer-sidenav" mode="side">
+    <jax-portfolio-drawer (drawer)="drawer"></jax-portfolio-drawer>
+  </mat-drawer>
+
+  <div class="drawer-sidenav-content">
+    <button mat-icon-button class="menu-button" [hidden]="drawer.opened" (click)="drawer.toggle()">
+      <mat-icon class="icon-l">menu</mat-icon>
+    </button>
+    <div class="content-container" (click)="this.closeDrawer()">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</mat-drawer-container>
