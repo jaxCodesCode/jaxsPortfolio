@@ -26,9 +26,10 @@ jax-about-card {
   display: flex;
   flex-direction: column;
   margin-bottom: 1rem;
-  padding-right: 0.5rem;
+  padding-right: 0.25rem;
   overflow-y: scroll;
   width: min-content;
+  min-width: 50vw;
 }
 
 .about-container::-webkit-scrollbar {

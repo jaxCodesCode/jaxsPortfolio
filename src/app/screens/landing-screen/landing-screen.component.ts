@@ -1,20 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MobileNoticeDialogComponent } from 'src/app/components/mobile-notice-dialog/mobile-notice-dialog.component';
 
 @Component({
   selector: 'jax-landing-screen',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatIconModule],
+  imports: [CommonModule, MatButtonModule, MatIconModule, MatDialogModule],
   templateUrl: './landing-screen.component.html',
   styleUrls: ['./landing-screen.component.scss']
 })
-export class LandingScreenComponent {
+export class LandingScreenComponent implements OnInit {
 
-  constructor(private readonly router: Router) {
+  constructor(public dialog: MatDialog, private readonly router: Router) {
 
+  }
+
+  ngOnInit(): void {
+    if ((navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i))) {
+      this.dialog.open(MobileNoticeDialogComponent)
+    }
   }
 
   enterPortfolio = () => {

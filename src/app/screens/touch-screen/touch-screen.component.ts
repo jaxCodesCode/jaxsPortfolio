@@ -11,12 +11,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { IconButtonComponent } from 'src/app/components/icon-button/icon-button.component';
 import { EmailService } from 'src/app/services/email/email.service';
 import { DownloadButtonComponent } from 'src/app/components/download-button/download-button.component';
+import { ScreenContainerComponent } from 'src/app/components/screen-container/screen-container.component';
 
 @Component({
   selector: 'jax-touch-screen',
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatIconModule,
-    InputComponent, TextareaComponent, SocialsComponent, IconButtonComponent, DownloadButtonComponent],
+    InputComponent, TextareaComponent, SocialsComponent, IconButtonComponent, DownloadButtonComponent, ScreenContainerComponent],
   templateUrl: './touch-screen.component.html',
   styleUrls: ['./touch-screen.component.scss']
 })

@@ -26,7 +26,7 @@ export class AboutCardComponent {
 
   getImgUrl = () => {
     if (this.photo)
-      return '/assets/images/' + this.photo + '.jpg';
+      return './assets/images/' + this.photo + '.jpg';
     else
       return undefined;
   };

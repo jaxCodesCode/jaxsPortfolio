@@ -9,11 +9,12 @@ import { AboutCardMode } from 'src/app/model/enums';
 import { IconButtonComponent } from 'src/app/components/icon-button/icon-button.component';
 import { Router } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
+import { ScreenContainerComponent } from 'src/app/components/screen-container/screen-container.component';
 
 @Component({
   selector: 'jax-about-screen',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatTabsModule, MatSidenavModule, MatIconModule, PortfolioDrawerComponent, AboutCardComponent, IconButtonComponent],
+  imports: [CommonModule, MatButtonModule, MatTabsModule, MatSidenavModule, MatIconModule, PortfolioDrawerComponent, AboutCardComponent, IconButtonComponent, ScreenContainerComponent],
   templateUrl: './about-screen.component.html',
   styleUrls: ['./about-screen.component.scss']
 })

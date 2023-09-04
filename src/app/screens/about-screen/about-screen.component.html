@@ -1,113 +1,109 @@
-<div class="screen-container">
-  <p class="screen-header">About Me</p>
-  <div class="about-container">
-    <div class="about-cards">
-      <jax-about-card class="indent-right" [mode]="AboutEnum.right" [text]="this.getText('intro')" [photo]="'headshot'"></jax-about-card>
-      <jax-about-card class="indent-left" [mode]="AboutEnum.left" [text]="this.getText('personal')" [photo]="'kenzie'"></jax-about-card>
-      <jax-about-card class="indent-right" [mode]="AboutEnum.right" [text]="this.getText('dogs')" [photo]="'dogs'"></jax-about-card>
-      <jax-about-card class="indent-left" [mode]="AboutEnum.left" [text]="this.getText('code')" [component]="icons"></jax-about-card>
-      <jax-about-card class="indent-right" [mode]="AboutEnum.right" [text]="this.getText('school')" [photo]="'rose'"></jax-about-card>
-      <jax-about-card class="indent-left" [mode]="AboutEnum.left" [text]="this.getText('work')" [component]="frameworkIcons"></jax-about-card>
-    </div>
-
-    <div class="summary-container">
-      <span class="summary-header">A day in the office</span>
-      <span>
-        As an experienced full-stack developer, I bring a comprehensive and versatile skill set that encompasses a wide range of technologies and methodologies, allowing me to excel in various aspects of software development. My primary areas of expertise revolve around the development of cutting-edge applications, with a particular emphasis on using Angular in conjunction with Spring Boot or Quarkus to build robust and efficient software solutions.<br><br>
-        One of the defining aspects of my professional approach is my unwavering commitment to delivering high-quality software. I place a strong emphasis on adhering to industry-leading architectural and user experience (UX) design principles. My dedication to creating top-tier architectures ensures that the software I develop is not only functional but also scalable, maintainable, and future-proof. I have a profound appreciation for the importance of crafting elegant and user-centric interfaces, ensuring that end-users have a seamless and enjoyable experience while interacting with the applications I build.<br><br>
-        Beyond my technical prowess, I have a deep passion for DevOps practices and methodologies. I firmly believe that the integration of DevOps principles is essential for streamlining the software development process, promoting collaboration, and enhancing the overall efficiency of software delivery. My expertise in DevOps extends to automating deployment pipelines, continuous integration and continuous delivery (CI/CD), and containerization, enabling organizations to achieve rapid and reliable software releases.<br><br>
-        I understand that software development is a collaborative endeavor, and I thrive in team environments. I work seamlessly alongside fellow developers, project managers, architects, and business stakeholders to ensure that projects are executed efficiently and that the end results consistently exceed expectations. I value open communication, constructive feedback, and the exchange of ideas within cross-functional teams, as I believe that these elements are vital for fostering creativity and innovation in software development.<br><br>
-      </span>
-    </div>
-
-    <div class="skills-container">
-      <span class="summary-header">Skills & Tech</span>
-      <mat-tab-group>
-        <mat-tab label="Languages">
-          <div style="display: flex; flex-direction: column; margin: 0.5rem 0;">
-            <div class="row">
-              <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
-                <span style="font-weight: 700;">Frontend</span>
-                <span>HTML | CSS | JSX</span>
-                <span>JavaScript | TypeScript</span>
-              </div>
-              <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
-                <span style="font-weight: 700;">Backend</span>
-                <span>Java | Python</span>
-                <span>C | C++ | C#</span>
-              </div>
-            </div>  
-            <div class="row" style="align-self: center;">
-              <div style="text-align: center; display: flex; flex-direction: column;">
-                <span style="font-weight: 700;">Databases</span>
-                <span>PostgreSQL | OracleDB</span>
-                <span>Microsoft SQL | MySQL | MongoDb</span>
-              </div>
-            </div>
-          </div>
-        </mat-tab>
-        <mat-tab label="Technologies">
-          <div style="display: flex; flex-direction: column; margin: 0.5rem 0;">
-            <div class="row">
-              <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
-                <span style="font-weight: 700;">Frontend</span>
-                <span>Angular | react.js</span>
-                <span>React Native | Expo</span>
-              </div>
-              <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
-                <span style="font-weight: 700;">Backend</span>
-                <span>Quarkus</span>
-                <span>Spring (Boot) Framework </span>
-              </div>
-            </div>  
-            <div class="row" style="align-self: center;">
-              <div style="text-align: center; display: flex; flex-direction: column;">
-                <span style="font-weight: 700;">Testing</span>
-                <span>Selenium</span>
-                <span>Jest | JUnit</span>
-              </div>
-            </div>
-          </div>
-        </mat-tab>
-        <mat-tab label="DevOps">
-          <div style="display: flex; flex-direction: column; margin: 0.5rem 0;">
-            <div class="row">
-              <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
-                <span style="font-weight: 700;">Containerization</span>
-                <span>Kubernetes</span>
-                <span>PCF | Docker</span>
-              </div>
-              <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
-                <span style="font-weight: 700;">CI/CD</span>
-                <span>Build/Deploy Pipelines</span>
-                <span>Azure TFS | Azure Cloud | Maven</span>
-              </div>
-            </div>  
-          </div>
-        </mat-tab>
-        <mat-tab label="Miscellaneous">
-          <div style="display: flex; flex-direction: column; margin: 0.5rem 0;">
-            <div class="row">
-              <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
-                <span style="font-weight: 700;">Business</span>
-                <span>Story planning/pointing</span>
-                <span>Requirement elicitation | AGILE Scrum</span>
-              </div>
-              <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
-                <span style="font-weight: 700;">Design</span>
-                <span>UI/UX | Auth Schemes</span>
-                <span>Architectural Design Patterns</span>
-              </div>
-            </div>  
-          </div>
-        </mat-tab>
-      </mat-tab-group>
-    </div>
-
-    <jax-icon-button [icon]="'exit_to_app'" [label]="'Get In Touch'" (click)="this.navigateToTouchScreen()"></jax-icon-button>
+<ng-template #content>
+  <div class="about-cards">
+    <jax-about-card class="indent-right" [mode]="AboutEnum.right" [text]="this.getText('intro')" [photo]="'headshot'"></jax-about-card>
+    <jax-about-card class="indent-left" [mode]="AboutEnum.left" [text]="this.getText('personal')" [photo]="'kenzie'"></jax-about-card>
+    <jax-about-card class="indent-right" [mode]="AboutEnum.right" [text]="this.getText('dogs')" [photo]="'dogs'"></jax-about-card>
+    <jax-about-card class="indent-left" [mode]="AboutEnum.left" [text]="this.getText('code')" [component]="icons"></jax-about-card>
+    <jax-about-card class="indent-right" [mode]="AboutEnum.right" [text]="this.getText('school')" [photo]="'rose'"></jax-about-card>
+    <jax-about-card class="indent-left" [mode]="AboutEnum.left" [text]="this.getText('work')" [component]="frameworkIcons"></jax-about-card>
   </div>
 
-</div>
+  <div class="summary-container">
+    <span class="summary-header">A day in the office</span>
+    <span>
+      As an experienced full-stack developer, I bring a comprehensive and versatile skill set that encompasses a wide range of technologies and methodologies, allowing me to excel in various aspects of software development. My primary areas of expertise revolve around the development of cutting-edge applications, with a particular emphasis on using Angular in conjunction with Spring Boot or Quarkus to build robust and efficient software solutions.<br><br>
+      One of the defining aspects of my professional approach is my unwavering commitment to delivering high-quality software. I place a strong emphasis on adhering to industry-leading architectural and user experience (UX) design principles. My dedication to creating top-tier architectures ensures that the software I develop is not only functional but also scalable, maintainable, and future-proof. I have a profound appreciation for the importance of crafting elegant and user-centric interfaces, ensuring that end-users have a seamless and enjoyable experience while interacting with the applications I build.<br><br>
+      Beyond my technical prowess, I have a deep passion for DevOps practices and methodologies. I firmly believe that the integration of DevOps principles is essential for streamlining the software development process, promoting collaboration, and enhancing the overall efficiency of software delivery. My expertise in DevOps extends to automating deployment pipelines, continuous integration and continuous delivery (CI/CD), and containerization, enabling organizations to achieve rapid and reliable software releases.<br><br>
+      I understand that software development is a collaborative endeavor, and I thrive in team environments. I work seamlessly alongside fellow developers, project managers, architects, and business stakeholders to ensure that projects are executed efficiently and that the end results consistently exceed expectations. I value open communication, constructive feedback, and the exchange of ideas within cross-functional teams, as I believe that these elements are vital for fostering creativity and innovation in software development.<br><br>
+    </span>
+  </div>
+
+  <div class="skills-container">
+    <span class="summary-header">Skills & Tech</span>
+    <mat-tab-group>
+      <mat-tab label="Languages">
+        <div style="display: flex; flex-direction: column; margin: 0.5rem 0;">
+          <div class="row">
+            <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
+              <span style="font-weight: 700;">Frontend</span>
+              <span>HTML | CSS | JSX</span>
+              <span>JavaScript | TypeScript</span>
+            </div>
+            <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
+              <span style="font-weight: 700;">Backend</span>
+              <span>Java | Python</span>
+              <span>C | C++ | C#</span>
+            </div>
+          </div>  
+          <div class="row" style="align-self: center;">
+            <div style="text-align: center; display: flex; flex-direction: column;">
+              <span style="font-weight: 700;">Databases</span>
+              <span>PostgreSQL | OracleDB</span>
+              <span>Microsoft SQL | MySQL | MongoDb</span>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Technologies">
+        <div style="display: flex; flex-direction: column; margin: 0.5rem 0;">
+          <div class="row">
+            <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
+              <span style="font-weight: 700;">Frontend</span>
+              <span>Angular | react.js</span>
+              <span>React Native | Expo</span>
+            </div>
+            <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
+              <span style="font-weight: 700;">Backend</span>
+              <span>Quarkus</span>
+              <span>Spring (Boot) Framework </span>
+            </div>
+          </div>  
+          <div class="row" style="align-self: center;">
+            <div style="text-align: center; display: flex; flex-direction: column;">
+              <span style="font-weight: 700;">Testing</span>
+              <span>Selenium</span>
+              <span>Jest | JUnit</span>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="DevOps">
+        <div style="display: flex; flex-direction: column; margin: 0.5rem 0;">
+          <div class="row">
+            <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
+              <span style="font-weight: 700;">Containerization</span>
+              <span>Kubernetes</span>
+              <span>PCF | Docker</span>
+            </div>
+            <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
+              <span style="font-weight: 700;">CI/CD</span>
+              <span>Build/Deploy Pipelines</span>
+              <span>Azure TFS | Azure Cloud | Maven</span>
+            </div>
+          </div>  
+        </div>
+      </mat-tab>
+      <mat-tab label="Miscellaneous">
+        <div style="display: flex; flex-direction: column; margin: 0.5rem 0;">
+          <div class="row">
+            <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
+              <span style="font-weight: 700;">Business</span>
+              <span>Story planning/pointing</span>
+              <span>Requirement elicitation | AGILE Scrum</span>
+            </div>
+            <div style="width: 50%; text-align: center; display: flex; flex-direction: column;">
+              <span style="font-weight: 700;">Design</span>
+              <span>UI/UX | Auth Schemes</span>
+              <span>Architectural Design Patterns</span>
+            </div>
+          </div>  
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <jax-icon-button [icon]="'exit_to_app'" [label]="'Get In Touch'" (click)="this.navigateToTouchScreen()"></jax-icon-button>
+</ng-template>
 
 <ng-template #icons>
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
@@ -132,3 +128,8 @@
     </div>
   </div>
 </ng-template>
+
+<jax-screen-container
+  header="About Me"
+  [content]="content">
+</jax-screen-container>
