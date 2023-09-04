@@ -1,0 +1,11 @@
+<div class="dialog-container">
+  <div class="header-container">
+    <span>{{header}}</span>
+    <button mat-icon-button (click)="this.closeDialog()">
+      <mat-icon>cancel</mat-icon>
+    </button>
+  </div>
+  <div>
+    <ng-template [ngTemplateOutlet]="content"></ng-template>
+  </div>
+</div>
