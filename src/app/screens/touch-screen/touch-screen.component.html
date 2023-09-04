@@ -1,5 +1,4 @@
-<div class="screen-container">
-  <p class="screen-header">Get In Touch</p>
+<ng-template #content>
   <div class="contact-form-container">
     <jax-input class="input" label="Name" (change)="this.formChange()"></jax-input>
     <jax-input class="input" label="Email" (change)="this.formChange()"></jax-input>
@@ -8,9 +7,15 @@
   </div>
   <div class="socials-container">
     <jax-download-button [fileName]="'jaxonHoffmanResume'"
-                        [label]="'My Resume'" 
+                        [label]="'Jax\'s Resume'" 
                         [path]="'/assets/files/resume.pdf'">
     </jax-download-button>
     <jax-socials></jax-socials>
   </div>
-</div>
+</ng-template>
+
+
+<jax-screen-container
+  header="Get In Touch"
+  [content]="content">
+</jax-screen-container>

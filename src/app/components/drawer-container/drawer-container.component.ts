@@ -7,13 +7,13 @@ import { Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
-  selector: 'jax-screen-container',
+  selector: 'jax-drawer-container',
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatSidenavModule, MatIconModule, PortfolioDrawerComponent, RouterModule],
-  templateUrl: './screen-container.component.html',
-  styleUrls: ['./screen-container.component.scss']
+  templateUrl: './drawer-container.component.html',
+  styleUrls: ['./drawer-container.component.scss']
 })
-export class ScreenContainerComponent {
+export class DrawerContainerComponent {
 
   @ViewChild('drawer') drawer!: MatDrawer;
 

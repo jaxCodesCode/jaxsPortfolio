@@ -1,0 +1,19 @@
+@import 'colors';
+
+.construction-container {
+  align-items: center;
+  background-color: rgba($color: map-get($map: $dark-palette, $key: purple-pale), $alpha: .75);
+  border-radius: 0.5rem;
+  color: map-get($map: $dark-palette, $key: purple-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 2rem 0.5rem;
+  max-width: 50vw;
+  text-align: center;
+
+  jax-icon-button {
+    margin-top: 0.5rem;
+  }
+}

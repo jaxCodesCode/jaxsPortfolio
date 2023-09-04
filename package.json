@@ -6,9 +6,7 @@
     "start": "ng serve -o",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "build-portfolio": "ng build --configuration production --base-href \"https://jaxCodesCode.github.io/jaxsPortfolio/\"",
-    "publish-portfolio": "npx angular-cli-ghpages --dir=dist/jaxsPortfolio",
-    "update-portfolio": "npm run build-portfolio && npm run publish-portfolio",
+    "update-portfolio": "ng deploy --cname=jaxonhoffman.com",
     "test": "jest"
   },
   "private": true,

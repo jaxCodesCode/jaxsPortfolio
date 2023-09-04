@@ -16,26 +16,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; height: 100
   overflow: hidden !important;
 }
 
-.screen-header {
-  background-color: rgba( map-get($map: $dark-palette, $key: purple), 1);
-  border-radius: 0.5rem;
-  color: map-get($map: $dark-palette, $key: purple-pale);
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  padding: 0.5rem;
-  width: fit-content;
-  margin: 0.75rem 1rem !important;
-}
-
-.screen-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 0.75rem); 
-  margin: 0 4rem 0.75rem 0;
-  width: 100%;
-}
-
 jax-icon-button {
   display: contents;
 }

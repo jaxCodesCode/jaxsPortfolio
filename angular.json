@@ -86,6 +86,9 @@
           "options": {
             "browserTarget": "jaxsPortfolio:build"
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
