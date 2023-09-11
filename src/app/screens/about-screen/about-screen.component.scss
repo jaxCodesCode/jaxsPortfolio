@@ -60,18 +60,22 @@ jax-about-card {
   transform: scale(2.3);
 }
 
-.mat-mdc-tab-group, .mat-mdc-tab-nav-bar{
-  --mat-tab-header-active-focus-label-text-color: #F6C9A8;
-  --mat-tab-header-active-label-text-color : #F6C9A8;
-  --mat-tab-header-inactive-label-text-color: #9FA2A1;
-  --mat-tab-header-inactive-focus-label-text-color: #9FA2A1;
-  --mat-tab-header-inactive-hover-label-text-color : #8F8686;
-  --mdc-tab-indicator-active-indicator-color: #F6C9A8;
-  --mat-tab-header-active-hover-label-text-color: #F6C9A8;
-  --mat-tab-header-active-ripple-color: #8F8686;
-  --mat-tab-header-inactive-ripple-color: #232222;
-  --mat-tab-header-active-focus-indicator-color: #F6C9A8;
-  --mat-tab-header-active-hover-indicator-color: #F6C9A8;
+.mat-mdc-tab:hover {
+  background-color: rgba($color: map-get($map: $dark-palette, $key: tan-pale), $alpha: 0.2) !important;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.mdc-tab__text-label {
+  color: map-get($map: $dark-palette, $key: grey) !important;
+}
+
+.mdc-tab--active .mdc-tab__text-label {
+  color: map-get($map: $dark-palette, $key: tan) !important;
+}
+
+.mdc-tab-indicator__content--underline {
+  border-color: map-get($map: $dark-palette, $key: tan) !important;
 }
 
 .row {
@@ -93,6 +97,7 @@ jax-about-card {
   text-align: center; 
   margin-bottom: 0.5rem;
   border-bottom: solid map-get($map: $dark-palette, $key: purple-pale);
+  width: 75%;
 
   span {
     line-height: 1.25rem;

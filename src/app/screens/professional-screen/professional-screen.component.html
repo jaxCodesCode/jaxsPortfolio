@@ -1,5 +1,69 @@
 <ng-template #content>
-  <jax-under-construction></jax-under-construction>
+  <div class="job-container" *ngFor="let job of jobs">
+    <div class="job-intro">
+      <div class="intro-header">
+        <mat-icon [svgIcon]="'gm'" class="icon"></mat-icon>
+        <div class="intro-header-text">
+          <span>{{job.company}}</span> 
+          <span class="header-minor-text">{{job.timespan}}</span>
+        </div>
+      </div>
+      <div class="job-intro-body">
+        <span>{{job.role}}</span>
+        <span class="job-intro-body-text">
+          {{job.summary}}
+        </span>
+      </div>
+    </div>
+    <div class="job-detail">
+      <mat-stepper orientation="vertical" [linear]="false">
+      <ng-template matStepperIcon="edit">
+        <mat-icon>circle</mat-icon>
+      </ng-template>
+      <ng-template matStepperIcon="number">
+        <mat-icon>circle</mat-icon>
+      </ng-template>
+      <mat-step *ngFor="let project of job.projects">
+        <ng-template matStepLabel>{{project.timespan}}</ng-template>
+        <div class="project-detail">
+          <span>
+            <div *ngFor="let paragraph of project.descriptionPs" class="paragraph">
+              {{paragraph}}
+            </div>
+          </span>
+        </div>  
+      </mat-step>
+      </mat-stepper>
+    </div>
+  </div>
+  
+  <div class="recognition-container">
+    <div class="recognition-header">
+      Peer Recognitions
+    </div>
+    <div class="recognition-carousel-container">
+      <ngb-carousel #carousel [showNavigationIndicators]="false" [pauseOnHover]="true" (slid)="updateSlideNumber($event)">
+        <ng-template ngbSlide *ngFor="let recognition of recognitions">
+          <div class="slide-container">
+            <div class="slide-content">
+              <div class="recognition">
+                <div *ngFor="let paragraph of recognition.recognitionPs" class="paragraph">
+                  {{paragraph}}  
+                </div>
+              </div>
+              <div class="recognizer">
+                - {{recognition.recognizer}}  
+              </div>
+            </div>
+
+            <span class="slide-index">
+              {{currentSlideId + 1}} / {{recognitions.length}}
+            </span>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
 </ng-template>
 
 <jax-screen-container
