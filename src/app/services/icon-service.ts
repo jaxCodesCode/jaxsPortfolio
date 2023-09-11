@@ -33,5 +33,8 @@ export enum Icons {
   Rose = 'rose',
   Quarkus = 'quarkus',
   Angular = 'angular',
-  SpringBoot = 'spring'
+  SpringBoot = 'spring', 
+  GeneralMotors = 'gm',
+  ForwardArrow = 'forward',
+  BackwardArrow = 'backward'
 }

@@ -1,0 +1,175 @@
+@import 'colors';
+
+.icon {
+  color: map-get($map: $dark-palette, $key: purple-pale);
+  margin: 0 1rem;
+  transform: scale(2);
+}
+
+.indent {
+  margin-left: 0.25rem;
+}
+
+.intro-header {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  
+  span {
+    margin-left: 0.25rem;
+  }
+}
+
+.intro-header-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+
+  .header-minor-text {
+    font-size: 0.65rem;
+  }
+}
+
+.job-container {
+  border-bottom: solid map-get($map: $dark-palette, $key: purple-pale);
+  display: flex;
+  height: 80vh;
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+
+.job-detail {
+  background-color: map-get($map: $dark-palette, $key: purple-pale);
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  color: map-get($map: $dark-palette, $key: purple-dark);
+  margin-left: 0.75rem;
+  padding: 0.5rem 0.25rem;
+  overflow-y: scroll;
+}
+
+.job-intro {
+  background-color: map-get($map: $dark-palette, $key: purple);
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+  padding: 0.5rem 0.25rem;
+  min-width: 25%;
+  max-width: 25%;
+}
+
+.job-intro-body {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  margin-left: 0.25rem;
+}
+
+.job-intro-body-text {
+  font-size: 0.65rem;
+  line-height: 1.5;
+  margin-left: 0.15rem;
+}
+
+.paragraph {
+  margin-bottom: 0.5rem;
+}
+
+.project-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.job-detail::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+}
+
+.job-detail::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.job-detail:hover::-webkit-scrollbar-thumb {
+  background-color: map-get($map: $dark-palette, $key: purple-dark);
+  border-radius: 6px;
+  border: solid map-get($map: $dark-palette, $key: purple);
+}
+
+.recognition-carousel-container {
+  margin: 0.5rem 0;
+}
+
+.recognition-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0 0 0;
+  width: 400px !important;
+}
+
+.recognition-header {
+  color: map-get($map: $dark-palette, $key: purple-pale);
+  font-size: 1.5rem;
+  padding: 0.25rem;
+}
+
+.recognition {
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.slide-container {
+  align-items: center;
+  background-color: map-get($map: $dark-palette, $key: purple-pale);
+  border: solid map-get($map: $dark-palette, $key: purple);
+  border-radius: 0.5rem;
+  color: map-get($map: $dark-palette, $key: purple-dark);
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  margin: 0 1.125rem 0 0.5rem;
+  padding-top: 0.5rem;
+  position: relative;
+  width: 450px;
+}
+
+.slide-content {
+  align-items: center;
+  background-color: map-get($map: $dark-palette, $key: purple);
+  border: solid map-get($map: $dark-palette, $key: purple-dark);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 270px;
+  overflow-y: scroll;
+  padding: 1rem 0.5rem;
+  position: relative;
+  width: 375px;
+}
+
+.slide-content::-webkit-scrollbar {
+  background-color: transparent;
+  width: 10px;
+}
+
+.slide-content::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.slide-content:hover::-webkit-scrollbar-thumb {
+  background-color: map-get($map: $dark-palette, $key: purple-pale);
+  border-radius: 6px;
+  border: solid map-get($map: $dark-palette, $key: purple-dark);
+}
+
+.slide-index {
+  padding: 0.5rem 0;
+}
+
+.slide-index::before {
+  content: '(';
+}
+
+.slide-index::after {
+  content: ')';
+}

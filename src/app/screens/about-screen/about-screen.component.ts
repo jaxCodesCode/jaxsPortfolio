@@ -12,6 +12,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { ScreenContainerComponent } from 'src/app/components/screen-container/screen-container.component';
 
 @Component({
+  encapsulation: ViewEncapsulation.None,
   selector: 'jax-about-screen',
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatTabsModule, MatSidenavModule, MatIconModule, PortfolioDrawerComponent, AboutCardComponent, IconButtonComponent, ScreenContainerComponent],

@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'colors';
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
 
 *,
 *::before,
@@ -11,6 +13,20 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; height: 100vh; overflow: hidden;}
+
+.carousel-indicators button {
+  background-color: map-get($map: $dark-palette, $key: purple-dark) !important;
+  border: solid map-get($map: $dark-palette, $key: purple) !important;
+  border-radius: 0.125rem !important;
+  width: 2rem !important;
+}
+
+.carousel-control-prev-icon{
+  background-image: url('./assets/icons/backward.svg') !important;
+}
+.carousel-control-next-icon{
+ background-image: url('./assets/icons/forward.svg') !important;
+}
 
 .mat-mdc-tab-body-content {
   overflow: hidden !important;
@@ -24,3 +40,35 @@ mat-drawer-content {
   overflow: hidden !important;
 }
 
+.mat-stepper-vertical {
+  background-color: map-get($map: $dark-palette, $key: purple-pale) !important;
+  --mat-stepper-line-color: red !important;
+}
+
+.mat-stepper-vertical .mat-vertical-stepper-header {
+  padding: 10px;
+  height: auto;
+}
+
+.mat-stepper-vertical .mat-stepper-vertical-line {
+  margin: 0 -4px; 
+}
+
+.mat-vertical-content {
+  padding-bottom: 0.25rem !important;
+  padding-right: 0 !important;
+}
+
+.mat-vertical-content-container {
+  margin-left: 0 !important;
+}
+
+.mat-step-icon {
+  background-color: map-get($map: $dark-palette, $key: purple-dark) !important;
+  color: map-get($map: $dark-palette, $key: purple-pale) !important;
+}
+
+.mat-step-icon-selected {
+    background-color: map-get($map: $dark-palette, $key: purple) !important;
+    color: map-get($map: $dark-palette, $key: purple-pale) !important;
+}
