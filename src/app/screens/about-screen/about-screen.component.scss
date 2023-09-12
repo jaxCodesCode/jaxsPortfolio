@@ -20,18 +20,6 @@ jax-about-card {
   margin-bottom: 0.5rem;
 }
 
-.about-container {
-  align-items: center;
-  color: map-get($map: $dark-palette, $key: purple-pale);
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  padding-right: 0.25rem;
-  overflow-y: scroll;
-  width: min-content;
-  min-width: 50vw;
-}
-
 .about-container::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
@@ -88,7 +76,6 @@ jax-about-card {
   border-bottom: solid map-get($map: $dark-palette, $key: purple-pale);
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 
 .summary-container {
@@ -106,5 +93,23 @@ jax-about-card {
 
 .summary-header {
   font-size: 1.5rem; 
-  margin: 0.25rem 0 0.5rem 0;
+  margin: 1rem 0 0.5rem 0;
+}
+
+@media only screen and (max-width: 680px) {
+  .about-cards {
+    margin: 0 calc(1rem - 8px) 0 1rem;
+  }
+
+  .indent-left {
+    margin-left: 0;
+  }
+  
+  .indent-right {
+    margin-right: 0;
+  }
+
+  .skills-container {
+    width: 80vw;
+  }
 }

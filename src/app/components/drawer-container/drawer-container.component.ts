@@ -5,11 +5,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { PortfolioDrawerComponent } from 'src/app/components/portfolio-drawer/portfolio-drawer.component';
 import { Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'jax-drawer-container',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatSidenavModule, MatIconModule, PortfolioDrawerComponent, RouterModule],
+  imports: [CommonModule, MatButtonModule, MatSidenavModule, MatIconModule, MatToolbarModule, 
+    PortfolioDrawerComponent, RouterModule],
   templateUrl: './drawer-container.component.html',
   styleUrls: ['./drawer-container.component.scss']
 })

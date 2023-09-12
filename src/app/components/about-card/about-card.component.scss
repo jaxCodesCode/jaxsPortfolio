@@ -31,9 +31,8 @@ img {
   align-items: center;
   display: flex;
   background-color: map-get($map: $dark-palette, $key: purple);
-  // height: 100%;
   padding: 0.5rem;
-  width: 400px;
+  max-width: 400px;
 }
 
 .text-container.left {
@@ -44,4 +43,43 @@ img {
 .text-container.right {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 680px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  .image-container {
+    text-align: center ;
+    padding-bottom: 0.25rem ;
+  }
+
+  .image-container.left {
+    border-top-left-radius: 0.5rem ;
+    border-top-right-radius: 0.5rem ;
+    border-bottom-right-radius: 0 ;
+    border-bottom-left-radius: 0 ;
+  }
+  
+  .image-container.right {
+    border-top-left-radius: 0 ;
+    border-top-right-radius: 0 ;
+    border-bottom-right-radius: 0.5rem ;
+    border-bottom-left-radius: 0.5rem ;
+  }
+
+  .text-container.left {
+    border-top-left-radius: 0 ;
+    border-top-right-radius: 0 ;
+    border-bottom-right-radius: 0.5rem ;
+    border-bottom-left-radius: 0.5rem ;
+  }
+  
+  .text-container.right {
+    border-top-left-radius: 0.5rem ;
+    border-top-right-radius: 0.5rem ;
+    border-bottom-right-radius: 0 ;
+    border-bottom-left-radius: 0 ;
+  }
 }

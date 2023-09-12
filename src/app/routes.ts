@@ -1,6 +1,6 @@
 import { Routes } from "@angular/router";
 import { LandingScreenComponent } from "./screens/landing-screen/landing-screen.component";
-import AboutScreenComponent from "./screens/about-screen/about-screen.component";
+import { AboutScreenComponent } from "./screens/about-screen/about-screen.component";
 import { EducationalScreenComponent } from "./screens/educational-screen/educational-screen.component";
 import { ProfessionalScreenComponent } from "./screens/professional-screen/professional-screen.component";
 import { TouchScreenComponent } from "./screens/touch-screen/touch-screen.component";

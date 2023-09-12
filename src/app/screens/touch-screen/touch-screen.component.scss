@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
-  padding: 0.25rem 1.75rem 0.75rem 1.75rem;
+  padding: 0.75rem 0;
   width: 100%;
   max-width: 400px;
 }
@@ -31,4 +31,11 @@ jax-download-button {
 
 jax-input {
   margin-bottom: 0.75rem;
+}
+
+@media only screen and (max-width: 680px) {
+  .contact-form-container {
+    margin: 0 calc(2rem - 8px) 0 2rem;
+    width: 80vw;
+  }
 }

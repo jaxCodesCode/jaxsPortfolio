@@ -40,6 +40,15 @@ mat-drawer-content {
   overflow: hidden !important;
 }
 
+.mat-mdc-tab-header-pagination-chevron {
+  border-color: map-get($map: $dark-palette, $key: grey);
+}
+.mat-toolbar {
+  background-color: map-get($map: $dark-palette, $key: purple);
+  color: map-get($map: $dark-palette, $key: purple-dark);
+  height: 10vh;
+}
+
 .mat-stepper-vertical {
   background-color: map-get($map: $dark-palette, $key: purple-pale) !important;
   --mat-stepper-line-color: red !important;

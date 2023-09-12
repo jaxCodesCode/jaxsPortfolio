@@ -19,7 +19,7 @@ import { ScreenContainerComponent } from 'src/app/components/screen-container/sc
   templateUrl: './about-screen.component.html',
   styleUrls: ['./about-screen.component.scss']
 })
-export default class AboutScreenComponent implements OnInit {
+export class AboutScreenComponent implements OnInit {
   AboutEnum = AboutCardMode;
   showFiller = false;
 
