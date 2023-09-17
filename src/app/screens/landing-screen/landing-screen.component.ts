@@ -6,11 +6,13 @@ import { Router } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MobileNoticeDialogComponent } from 'src/app/components/mobile-notice-dialog/mobile-notice-dialog.component';
 import { UtilService } from 'src/app/services/util/util.service';
+import { SocialsComponent } from 'src/app/components/socials/socials.component';
+import { TechStackComponent } from 'src/app/components/tech-stack/tech-stack.component';
 
 @Component({
   selector: 'jax-landing-screen',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatIconModule, MatDialogModule],
+  imports: [CommonModule, MatButtonModule, MatIconModule, MatDialogModule, TechStackComponent],
   templateUrl: './landing-screen.component.html',
   styleUrls: ['./landing-screen.component.scss']
 })

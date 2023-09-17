@@ -1,32 +1,54 @@
 @import 'colors';
 
+.footer {
+  background-color: rgba(map-get($dark-palette, purple-pale), 0.3) !important;
+  padding: 0.25rem 0 !important;
+}
+
 .landing-container {
   background-attachment: fixed;
   background-image: url(./../../../assets/images/background.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
   opacity: 75%;
 }
 
 .landing-content-container {
-  align-content: center;
+  align-items: center;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  height: 100vh;
-  justify-content: center;
+  height: 100%;
+  justify-content: space-between;
+  padding: 2rem 0;
   width: 100%;
 }
 
 .landing-text-container {
-  background-color: rgba(map-get($dark-palette, purple-pale), 0.75);
-  border-radius: 0.5rem;
-  padding: 0.75rem;
-  text-align: center;
-
+  padding: 0 0.75rem;
   button {
     background-color: #fddfbc;
   }
+}
+
+.section-container {
+  background-color: rgba(map-get($dark-palette, purple-pale), 0.75);
+  border-radius: 0.5rem;
+  padding: 0.75rem 0;
+  text-align: center;
+  width: fit-content;
+}
+
+.stack-header-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.tech-stack-container {
+  width: max-content;
 }
 
 .to-portfolio-button {
