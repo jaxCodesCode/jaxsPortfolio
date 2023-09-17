@@ -10,11 +10,11 @@
   align-items: center;
   flex: 1 1 auto;
   align-items: stretch;
-  height: 100%;
+  position: relative;
+  margin-top: 10vh;
 }
 
 .drawer-container {
-  height: 100%;
   background-color: map-get($map: $dark-palette, $key: purple);
 }
 
@@ -22,12 +22,13 @@
   background-color: map-get($map: $dark-palette, $key: purple-dark);;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 
 .drawer-sidenav {
   background-color: map-get($map: $dark-palette, $key: purple);
   padding: 0.5rem;
+  height: 100vh;
+  position: fixed;
 }
 
 .icon-l {
