@@ -16,15 +16,16 @@ import { Job, jaxsJobs } from 'src/app/model/job';
   styleUrls: ['./professional-screen.component.scss']
 })
 export class ProfessionalScreenComponent implements AfterViewInit {
-  @ViewChild('carousel', { static: true }) carousel!: NgbCarousel;
-
   jobs: Job[] = jaxsJobs;
   recognitions: Recognition[] = jaxsRecognitions;
 
   currentSlideId = 0;
 
+  @ViewChild('carousel') carousel!: NgbCarousel;
+
   ngAfterViewInit(): void {
-      this.carousel.pause()
+    if (this.carousel)
+      this.carousel.pause();
   }
 
   updateSlideNumber = (slidEvent: NgbSlideEvent) => {

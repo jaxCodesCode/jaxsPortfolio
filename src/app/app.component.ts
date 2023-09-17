@@ -14,7 +14,18 @@ export class AppComponent implements OnInit {
   title = 'jaxsPortfolio';
 
   constructor(private iconService: IconService) {
-
+    if( !window.location.hash && window.addEventListener ){
+      window.addEventListener("load", function() {
+          setTimeout(function(){
+              window.scrollTo(0, 0);
+          }, 0);
+      });
+      window.addEventListener( "orientationchange",function() {
+          setTimeout(function(){
+              window.scrollTo(0, 0);
+          }, 0);
+      });
+  }
   }
 
   ngOnInit(): void {

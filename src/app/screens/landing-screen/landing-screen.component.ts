@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MobileNoticeDialogComponent } from 'src/app/components/mobile-notice-dialog/mobile-notice-dialog.component';
+import { UtilService } from 'src/app/services/util/util.service';
 
 @Component({
   selector: 'jax-landing-screen',
@@ -15,12 +16,14 @@ import { MobileNoticeDialogComponent } from 'src/app/components/mobile-notice-di
 })
 export class LandingScreenComponent implements OnInit {
 
-  constructor(public dialog: MatDialog, private readonly router: Router) {
-
-  }
+  constructor(
+    public dialog: MatDialog, 
+    private readonly router: Router, 
+    private readonly utilService: UtilService
+  ) { }
 
   ngOnInit(): void {
-    if ((navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i))) {
+    if (this.utilService.deviceIsMobile()) {
       this.dialog.open(MobileNoticeDialogComponent)
     }
   }

@@ -12,7 +12,17 @@
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; height: 100vh; overflow: hidden;}
+body { 
+  background-color: map-get($map: $dark-palette, $key: purple);
+  margin: 0;
+  font-family: 
+    Roboto, 
+    "Helvetica Neue", 
+    sans-serif;
+  height: 100%; 
+  overflow: hidden;
+  padding-bottom: env(safe-area-inset-bottom) !important;
+}
 
 .carousel-indicators button {
   background-color: map-get($map: $dark-palette, $key: purple-dark) !important;
@@ -45,6 +55,8 @@ mat-drawer-content {
 }
 .mat-toolbar {
   background-color: map-get($map: $dark-palette, $key: purple);
+  border-bottom: solid map-get($map: $dark-palette, $key: purple-pale);
+  border-bottom-width: 4px;
   color: map-get($map: $dark-palette, $key: purple-dark);
   height: 10vh;
 }

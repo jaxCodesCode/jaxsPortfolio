@@ -34,13 +34,13 @@
   border-bottom: solid map-get($map: $dark-palette, $key: purple-pale);
   display: flex;
   padding-bottom: 0.5rem;
-  width: 100%;
+  width: 90%;
 }
 
 .job-detail {
   background-color: map-get($map: $dark-palette, $key: purple-pale);
-  border-top-right-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   color: map-get($map: $dark-palette, $key: purple-dark);
   margin-left: 0.75rem;
   padding: 0.5rem 0.25rem;
@@ -49,8 +49,8 @@
 
 .job-intro {
   background-color: map-get($map: $dark-palette, $key: purple);
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
   padding: 0.5rem 0.25rem;
   min-width: 25%;
   max-width: 25%;
@@ -171,4 +171,45 @@
 
 .slide-index::after {
   content: ')';
+}
+
+@media only screen and (max-width: 680px) {
+  .job-container {
+    flex-direction: column;
+    justify-content: center;
+    // padding: 0 calc(1rem - 8px) 1rem 1rem;
+    width: 80%;
+  }
+
+  .job-intro {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    max-width: none;
+  }
+
+  .job-detail {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: 0;
+  }
+
+  .recognition-container {
+    width: 80%;
+    margin-left: 0.5rem;
+  }
+
+  .slide-container {
+    height: 200px;
+    margin: 0 0.5rem 0 0.05rem;
+    width: 300px;
+  }
+
+  .slide-content {
+    height: 125px;
+    width: 225px;
+  }
 }
