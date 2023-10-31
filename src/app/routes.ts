@@ -9,27 +9,33 @@ import { DrawerContainerComponent } from "./components/drawer-container/drawer-c
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => LandingScreenComponent
+    loadComponent: () => LandingScreenComponent,
+    data: { animation: 'Landing' }
   },
   {
     path: 'portfolio',
     loadComponent: () => DrawerContainerComponent,
+    data: { animation: 'Portfolio' },
     children: [
       {
         path: 'about',
-        loadComponent: () => AboutScreenComponent
+        loadComponent: () => AboutScreenComponent,
+        data: { animation: 'About' }
       },
       {
         path: 'educational-experience',
-        loadComponent: () => EducationalScreenComponent
+        loadComponent: () => EducationalScreenComponent,
+        data: { animation: 'Education' }
       },
       {
         path: 'professional-experience',
-        loadComponent: () => ProfessionalScreenComponent
+        loadComponent: () => ProfessionalScreenComponent,
+        data: { animation: 'Professional' }
       },
       {
         path: 'get-in-touch',
-        loadComponent: () => TouchScreenComponent
+        loadComponent: () => TouchScreenComponent,
+        data: { animation: 'Touch' }
       }
     ]
   }

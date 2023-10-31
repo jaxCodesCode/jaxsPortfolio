@@ -24,4 +24,8 @@ export class PortfolioDrawerComponent {
     if (this.drawer)
       this.drawer.close();
   }
+
+  goToLanding(): void {
+    this.router.navigate(['']);
+  }
 }

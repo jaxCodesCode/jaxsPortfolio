@@ -42,8 +42,10 @@
 }
 
 .stack-header-text {
+  color: map-get($map: $dark-palette, $key: tan);
   font-size: 1.125rem;
   font-weight: 600;
+  letter-spacing: 3px;
   margin-bottom: 0.25rem;
 }
 
