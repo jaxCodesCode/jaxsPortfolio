@@ -11,7 +11,7 @@ import { UtilService } from 'src/app/services/util/util.service';
 })
 export class ScreenContainerComponent {
   @Input()
-  header!: string;
+  header!: TemplateRef<Component>;
 
   @Input()
   content!: TemplateRef<Component>;

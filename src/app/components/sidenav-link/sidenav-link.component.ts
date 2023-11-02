@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButton, MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { MatDrawer } from '@angular/material/sidenav';
+import { ScrollSnapService } from 'src/app/services/scroll-snap/scroll-snap.service';
 
 @Component({
   selector: 'jax-sidenav-link',
@@ -24,12 +25,13 @@ export class SidenavLinkComponent {
 
   drawer: MatDrawer;
 
-  constructor(private readonly router: Router, drawer: MatDrawer) {
+  constructor(private readonly router: Router, drawer: MatDrawer, private readonly scrollSnapService: ScrollSnapService) {
     this.drawer = drawer;
   }
 
   navigate = () => {
-    this.router.navigate([this.route]);
+    // this.router.navigate([this.route]);
+    this.scrollSnapService.scrollToElement(this.route);
     this.drawer.close();
   }
 }

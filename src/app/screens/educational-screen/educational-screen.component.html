@@ -2,7 +2,11 @@
   <jax-under-construction></jax-under-construction>
 </ng-template>
 
+<ng-template #header>
+  <p data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" class="screen-header">Educational Experience</p>
+</ng-template>
+
 <jax-screen-container
-  header="Educational Experience"
+  [header]="header"
   [content]="content">
 </jax-screen-container>

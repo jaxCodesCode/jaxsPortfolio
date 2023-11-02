@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -10,6 +10,8 @@ import { IconButtonComponent } from 'src/app/components/icon-button/icon-button.
 import { Router } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ScreenContainerComponent } from 'src/app/components/screen-container/screen-container.component';
+import { ScrollSnapService } from 'src/app/services/scroll-snap/scroll-snap.service';
+import Aos from 'aos';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
@@ -19,13 +21,13 @@ import { ScreenContainerComponent } from 'src/app/components/screen-container/sc
   templateUrl: './about-screen.component.html',
   styleUrls: ['./about-screen.component.scss']
 })
-export class AboutScreenComponent implements OnInit {
+export class AboutScreenComponent implements OnInit, AfterViewInit {
   AboutEnum = AboutCardMode;
-  showFiller = false;
+  showLongParagraph = false;
 
   textMap = new Map<string, string>();
 
-  constructor(private readonly router: Router) {
+  constructor(private readonly scrollSnapService: ScrollSnapService) {
 
   }
 
@@ -38,6 +40,10 @@ export class AboutScreenComponent implements OnInit {
     this.textMap.set('work', 'Despite that, I had little exposure to web development before joining General Motors upon my graduation. In my three years at GM, I built full-stack web applications, and supported their full lifecycle; from requirements to secure production releases.')
   }
 
+  ngAfterViewInit(): void {
+    this.scrollSnapService.registerElement('dayInTheOffice', document.getElementById('dayInTheOffice'));
+  }
+
   getText = (key: string) => {
     if (this.textMap.has(key))
       return this.textMap.get(key);
@@ -46,6 +52,12 @@ export class AboutScreenComponent implements OnInit {
   }
 
   navigateToTouchScreen = () => {
-    this.router.navigate(['portfolio', 'get-in-touch']);
+    this.scrollSnapService.scrollToElement('touch');
+  }
+
+  toggleLongParagraph = () => {
+    this.showLongParagraph = !this.showLongParagraph;
+    this.scrollSnapService.scrollToElementWithOffset('dayInTheOffice', -150);
+    Aos.refreshHard()
   }
 }

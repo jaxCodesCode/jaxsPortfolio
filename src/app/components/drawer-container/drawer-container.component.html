@@ -10,10 +10,16 @@
       </button>
       <span class="application-name">JaxsPortfolio</span>
     </mat-toolbar>
-    <div class="content-container" (click)="this.closeDrawer()" 
-      [@routeAnimations]="o && o.activatedRouteData 
-        && o.activatedRouteData['animation']">
-      <router-outlet #o="outlet"></router-outlet>
+    <div class="content-container" (click)="this.closeDrawer()">
+      <div id='about' style="scroll-snap-align: start; scroll-margin-top: 10vh;">
+        <jax-about-screen></jax-about-screen>
+      </div>
+      <div id='professional' style="scroll-snap-align: start; scroll-margin-top: 10vh;">
+        <jax-professional-screen></jax-professional-screen>
+      </div>
+      <div id='touch' style="scroll-snap-align: start;">
+        <jax-touch-screen></jax-touch-screen>
+      </div>
     </div>
   </div>
 </mat-drawer-container>

@@ -6,13 +6,12 @@
 }
 
 .landing-container {
-  background-attachment: fixed;
   background-image: url(./../../../assets/images/background.jpg);
+  background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  opacity: 75%;
 }
 
 .landing-content-container {

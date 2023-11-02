@@ -1,6 +1,6 @@
 <ng-template #content>
   <div class="job-container" *ngFor="let job of jobs">
-    <div class="job-intro">
+    <div class="job-intro" data-aos="fade-left" data-aos-duration="1000" >
       <div class="intro-header">
         <mat-icon [svgIcon]="'gm'" class="icon"></mat-icon>
         <div class="intro-header-text">
@@ -15,7 +15,7 @@
         </span>
       </div>
     </div>
-    <div class="job-detail">
+    <div class="job-detail" data-aos="fade-right" data-aos-duration="2000" >
       <mat-stepper orientation="vertical" [linear]="false">
       <ng-template matStepperIcon="edit">
         <mat-icon>circle</mat-icon>
@@ -37,7 +37,7 @@
     </div>
   </div>
   
-  <div class="recognition-container">
+  <div class="recognition-container" data-aos="zoom-in" data-aos-duration="3000" >
     <div class="recognition-header">
       Peer Recognitions
     </div>
@@ -66,7 +66,11 @@
   </div>
 </ng-template>
 
+<ng-template #header>
+  <p data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" class="screen-header">Professional Experience</p>
+</ng-template>
+
 <jax-screen-container
-  header="Professional Experience"
+  [header]="header"
   [content]="content">
 </jax-screen-container>

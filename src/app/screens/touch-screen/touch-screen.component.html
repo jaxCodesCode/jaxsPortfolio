@@ -1,11 +1,11 @@
 <ng-template #content>
   <div class="contact-form-container">
-    <jax-input class="input" label="Name" (change)="this.formChange()"></jax-input>
-    <jax-input class="input" label="Email" (change)="this.formChange()"></jax-input>
-    <jax-textarea class="input" label="Message" (change)="this.formChange()"></jax-textarea>
-    <button class="submit-button" mat-raised-button (click)="submitForm()" [disabled]="!this.formValid()">Send an email</button>
+    <jax-input class="input" label="Name" (change)="this.formChange()" data-aos="flip-up" data-aos-duration="2000"></jax-input>
+    <jax-input class="input" label="Email" (change)="this.formChange()" data-aos="flip-up" data-aos-duration="2000"></jax-input>
+    <jax-textarea class="input" label="Message" (change)="this.formChange()" data-aos="flip-up" data-aos-duration="2000"></jax-textarea>
+    <button class="submit-button" mat-raised-button (click)="submitForm()" [disabled]="!this.formValid()" data-aos="flip-up" data-aos-duration="2000">Send an email</button>
   </div>
-  <div class="socials-container">
+  <div class="socials-container" data-aos="flip-up" data-aos-duration="2000">
     <jax-download-button [fileName]="'jaxonHoffmanResume'"
                         [label]="'Jax\'s Resume'" 
                         [path]="'/assets/files/resume.pdf'">
@@ -14,8 +14,13 @@
   </div>
 </ng-template>
 
+<ng-template #header>
+  <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-350" class="screen-header">Get In Touch</p>
+</ng-template>
 
-<jax-screen-container
-  header="Get In Touch"
-  [content]="content">
-</jax-screen-container>
+<div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-offset="-200" style="height: 100vh;">
+  <jax-screen-container
+    [header]="header"
+    [content]="content">
+  </jax-screen-container>
+</div>
