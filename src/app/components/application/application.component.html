@@ -1,0 +1,25 @@
+<div pAnimateOnScroll class="animation-duration-1000 animation-ease-in jax-application-container" enterClass="fadeindown">
+  <div class="preview-container">
+    {{application.projectName}}
+    <img [src]="this.getImgUrl()" (click)="openInNewTab()"/>
+  </div>
+  <div class="description-container">
+    <mat-divider [vertical]="true"></mat-divider>
+    <div class="application-description" [innerHTML]="this.application.description"></div>
+    <mat-divider [vertical]="true"></mat-divider>
+    <div class="application-links-container">
+      <div>
+        <mat-icon [svgIcon]="'link'"></mat-icon>
+        <a [href]="this.application.projectUrl" target="_blank">
+          Take Me There
+        </a>
+      </div>
+      <div>
+        <mat-icon svgIcon="github"></mat-icon>
+        <a [href]="this.application.githubUrl" target="_blank">
+          GitHub URL
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
