@@ -8,11 +8,13 @@ import { SocialLinkComponent } from 'src/app/components/social-link/social-link.
 import { UtilService } from 'src/app/services/util/util.service';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MobileNoticeDialogComponent } from 'src/app/components/mobile-notice-dialog/mobile-notice-dialog.component';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { AnimateModule } from 'primeng/animate'
 
 @Component({
   selector: 'jax-landing-screen',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatIconModule, MatDialogModule, TechStackComponent, SocialLinkComponent],
+  imports: [CommonModule, MatButtonModule, MatIconModule, MatDialogModule, TechStackComponent, SocialLinkComponent, AnimateOnScrollModule, AnimateModule],
   templateUrl: './landing-screen.component.html',
   styleUrls: ['./landing-screen.component.scss']
 })

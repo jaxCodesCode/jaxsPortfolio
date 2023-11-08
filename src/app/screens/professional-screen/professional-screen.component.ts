@@ -7,11 +7,13 @@ import { NgbCarousel, NgbCarouselModule, NgbSlideEvent } from '@ng-bootstrap/ng-
 import { Recognition, jaxsRecognitions } from 'src/app/model/recognition';
 import { Project, jaxsProjects } from 'src/app/model/project';
 import { Job, jaxsJobs } from 'src/app/model/job';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'jax-professional-screen',
   standalone: true,
-  imports: [CommonModule, ScreenContainerComponent, MatIconModule, MatStepperModule, NgbCarouselModule],
+  imports: [CommonModule, ScreenContainerComponent, MatIconModule, MatStepperModule, NgbCarouselModule,
+    AnimateOnScrollModule],
   templateUrl: './professional-screen.component.html',
   styleUrls: ['./professional-screen.component.scss']
 })

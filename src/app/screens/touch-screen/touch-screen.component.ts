@@ -12,12 +12,14 @@ import { IconButtonComponent } from 'src/app/components/icon-button/icon-button.
 import { EmailService } from 'src/app/services/email/email.service';
 import { DownloadButtonComponent } from 'src/app/components/download-button/download-button.component';
 import { ScreenContainerComponent } from 'src/app/components/screen-container/screen-container.component';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'jax-touch-screen',
   standalone: true,
   imports: [CommonModule, MatButtonModule, MatDividerModule, MatFormFieldModule, MatInputModule, MatIconModule,
-    InputComponent, TextareaComponent, SocialsComponent, IconButtonComponent, DownloadButtonComponent, ScreenContainerComponent],
+    InputComponent, TextareaComponent, SocialsComponent, IconButtonComponent, DownloadButtonComponent, ScreenContainerComponent,
+    AnimateOnScrollModule],
   templateUrl: './touch-screen.component.html',
   styleUrls: ['./touch-screen.component.scss']
 })

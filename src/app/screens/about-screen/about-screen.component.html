@@ -1,26 +1,38 @@
 <ng-template #content>
   <div class="about-cards">
-    <jax-about-card data-aos="fade-up-right" data-aos-duration="3000" data-aos-anchor-placement="center-bottom" class="indent-right" [mode]="AboutEnum.right" [text]="this.getText('intro')" [photo]="'headshot'"></jax-about-card>
-    <jax-about-card data-aos="fade-up-left" data-aos-duration="3000" class="indent-left" [mode]="AboutEnum.left" [text]="this.getText('personal')" [photo]="'kenzie'"></jax-about-card>
-    <jax-about-card data-aos="fade-up-right" data-aos-duration="3000" class="indent-right" [mode]="AboutEnum.right" [text]="this.getText('dogs')" [photo]="'dogs'"></jax-about-card>
-    <jax-about-card data-aos="fade-up-left" data-aos-duration="3000" class="indent-left" [mode]="AboutEnum.left" [text]="this.getText('code')" [component]="icons"></jax-about-card>
-    <jax-about-card data-aos="fade-up-right" data-aos-duration="3000" class="indent-right" [mode]="AboutEnum.right" [text]="this.getText('school')" [photo]="'rose'"></jax-about-card>
-    <jax-about-card data-aos="fade-up-left" data-aos-duration="3000" class="indent-left" [mode]="AboutEnum.left" [text]="this.getText('work')" [component]="frameworkIcons"></jax-about-card>
+    <jax-about-card pAnimateOnScroll class="indent-right animation-duration-2000 animation-ease-out"
+                    enterClass="fadeinleft" leaveClass="fadeoutright" 
+                    [mode]="AboutEnum.right" [text]="this.getText('intro')" [photo]="'headshot'"></jax-about-card>
+    <jax-about-card pAnimateOnScroll class="indent-left animation-duration-2000 animation-ease-out"
+                    enterClass="fadeinright" leaveClass="fadeoutleft"
+                    [mode]="AboutEnum.left" [text]="this.getText('personal')" [photo]="'kenzie'"></jax-about-card>
+    <jax-about-card pAnimateOnScroll class="indent-right animation-duration-2000 animation-ease-out"
+                    enterClass="fadeinleft" leaveClass="fadeoutright"
+                    [mode]="AboutEnum.right" [text]="this.getText('dogs')" [photo]="'dogs'"></jax-about-card>
+    <jax-about-card pAnimateOnScroll class="indent-left animation-duration-2000 animation-ease-out"
+                    enterClass="fadeinright" leaveClass="fadeoutleft"
+                    [mode]="AboutEnum.left" [text]="this.getText('code')" [component]="icons"></jax-about-card>
+    <jax-about-card pAnimateOnScroll class="indent-right animation-duration-2000 animation-ease-out"
+                    enterClass="fadeinleft" leaveClass="fadeoutright"
+                    [mode]="AboutEnum.right" [text]="this.getText('school')" [photo]="'rose'"></jax-about-card>
+    <jax-about-card pAnimateOnScroll class="indent-left animation-duration-2000 animation-ease-out"
+                    enterClass="fadeinright" leaveClass="fadeoutleft"
+                    [mode]="AboutEnum.left" [text]="this.getText('work')" [component]="frameworkIcons"></jax-about-card>
   </div>
 
-  <div data-aos="zoom-out-up" data-aos-duration="3000" class="summary-container" style="overflow: hidden;">
+  <div pAnimateOnScroll enterClass="zoominup" class="summary-container animation-duration-1000" style="overflow: hidden;">
     <span id="dayInTheOffice" class="summary-header">A day in the office</span>
     <div class="long-paragraph" [ngClass]="{showLongParagraph: showLongParagraph}">
-      <span data-aos="fade-left" data-aos-duration="3000">
+      <span>
         As an experienced full-stack developer, I bring a comprehensive and versatile skill set that encompasses a wide range of technologies and methodologies, allowing me to excel in various aspects of software development. My primary areas of expertise revolve around the development of cutting-edge applications, with a particular emphasis on using Angular in conjunction with Spring Boot or Quarkus to build robust and efficient software solutions.<br><br>
       </span>
-      <span data-aos="fade-right" data-aos-duration="3000">
+      <span>
         One of the defining aspects of my professional approach is my unwavering commitment to delivering high-quality software. I place a strong emphasis on adhering to industry-leading architectural and user experience (UX) design principles. My dedication to creating top-tier architectures ensures that the software I develop is not only functional but also scalable, maintainable, and future-proof. I have a profound appreciation for the importance of crafting elegant and user-centric interfaces, ensuring that end-users have a seamless and enjoyable experience while interacting with the applications I build.<br><br>
       </span>
-      <span data-aos="fade-left" data-aos-duration="3000">
+      <span>
         Beyond my technical prowess, I have a deep passion for DevOps practices and methodologies. I firmly believe that the integration of DevOps principles is essential for streamlining the software development process, promoting collaboration, and enhancing the overall efficiency of software delivery. My expertise in DevOps extends to automating deployment pipelines, continuous integration and continuous delivery (CI/CD), and containerization, enabling organizations to achieve rapid and reliable software releases.<br><br>
       </span>
-      <span data-aos="fade-right" data-aos-duration="3000">
+      <span>
         I understand that software development is a collaborative endeavor, and I thrive in team environments. I work seamlessly alongside fellow developers, project managers, architects, and business stakeholders to ensure that projects are executed efficiently and that the end results consistently exceed expectations. I value open communication, constructive feedback, and the exchange of ideas within cross-functional teams, as I believe that these elements are vital for fostering creativity and innovation in software development.
       </span>
     </div>
@@ -30,7 +42,7 @@
     </button>
   </div>
 
-  <div data-aos="zoom-out-up" data-aos-duration="3000" class="skills-container">
+  <div pAnimateOnScroll enterClass="zoominup" class="skills-container animation-duration-1000">
     <span class="summary-header">Skills & Tech</span>
     <mat-tab-group>
       <mat-tab label="Languages">
@@ -114,17 +126,17 @@
     </mat-tab-group>
   </div>
 
-  <div data-aos="fade-up" data-aos-duration="2000">
+  <div pAnimateOnScroll class="animation-duration-2000" enterClass="fadeindown">
     <jax-icon-button [icon]="'exit_to_app'" [label]="'Get In Touch'" (click)="this.navigateToTouchScreen()"></jax-icon-button>
   </div>
 </ng-template>
 
 <ng-template #icons>
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-    <div style="width: 100px; text-align: center;">
+    <div style="width: 100px; text-align: center; margin-bottom: 0.25rem;">
       <mat-icon class="icon icon-l" [svgIcon]="'javascript'"></mat-icon>
     </div>
-    <div style="text-align: center;">
+    <div style="text-align: center; display: flex;">
       <mat-icon class="icon icon-xl" [svgIcon]="'css'"></mat-icon>
       <mat-icon class="icon icon-l" [svgIcon]="'html'"></mat-icon>
     </div>
@@ -133,10 +145,10 @@
 
 <ng-template #frameworkIcons>
   <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
-    <div style="width: 100px; text-align: center;">
+    <div style="width: 100px; text-align: center; margin-bottom: 0.25rem;">
       <mat-icon class="icon icon-l" [svgIcon]="'quarkus'"></mat-icon>
     </div>
-    <div style="text-align: center;">
+    <div style="text-align: center; display: flex;">
       <mat-icon class="icon icon-l" [svgIcon]="'angular'"></mat-icon>
       <mat-icon class="icon icon-l" [svgIcon]="'spring'"></mat-icon>
     </div>
@@ -144,7 +156,10 @@
 </ng-template>
 
 <ng-template #header>
-  <p data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" class="screen-header">About Me</p>
+  <p pAnimateOnScroll class="screen-header 
+                            animation-duration-1000 animation-duration-500 
+                            animation-ease-in"
+                            enterClass="fadeindown" leaveClass="fadeoutup">About Me</p>
 </ng-template>
 
 <jax-screen-container

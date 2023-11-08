@@ -3,7 +3,6 @@
 img {
   border-radius: 0.5rem;
   width: 100%;
-  max-width: 200px;
   height: auto;
 }
 
@@ -12,6 +11,7 @@ img {
   border-radius: 0.5rem;
   display: flex;
   font-size: 1.5rem;
+  max-width: 800px;
 }
 
 .image-container {
@@ -20,6 +20,7 @@ img {
   display: flex;
   justify-content: center;
   padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+  // max-width: 30%;
 }
 
 .image-container.left {
@@ -37,7 +38,6 @@ img {
   display: flex;
   background-color: map-get($map: $dark-palette, $key: purple);
   padding: 1rem;
-  max-width: 500px;
   line-height: 2rem;
 }
 

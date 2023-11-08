@@ -30,7 +30,6 @@ export class SidenavLinkComponent {
   }
 
   navigate = () => {
-    // this.router.navigate([this.route]);
     this.scrollSnapService.scrollToElement(this.route);
     this.drawer.close();
   }

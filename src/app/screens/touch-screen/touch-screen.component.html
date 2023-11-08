@@ -1,11 +1,11 @@
 <ng-template #content>
   <div class="contact-form-container">
-    <jax-input class="input" label="Name" (change)="this.formChange()" data-aos="flip-up" data-aos-duration="2000"></jax-input>
-    <jax-input class="input" label="Email" (change)="this.formChange()" data-aos="flip-up" data-aos-duration="2000"></jax-input>
-    <jax-textarea class="input" label="Message" (change)="this.formChange()" data-aos="flip-up" data-aos-duration="2000"></jax-textarea>
-    <button class="submit-button" mat-raised-button (click)="submitForm()" [disabled]="!this.formValid()" data-aos="flip-up" data-aos-duration="2000">Send an email</button>
+    <jax-input pAnimateOnScroll class="input animation-duration-2000" enterClass="flipup" label="Name" (change)="this.formChange()"></jax-input>
+    <jax-input pAnimateOnScroll class="input animation-duration-2000" enterClass="flipup" label="Email" (change)="this.formChange()"></jax-input>
+    <jax-textarea pAnimateOnScroll class="input animation-duration-2000" enterClass="flipup" label="Message" (change)="this.formChange()"></jax-textarea>
+    <button pAnimateOnScroll class="submit-button animation-duration-2000" enterClass="flipup" mat-raised-button (click)="submitForm()" [disabled]="!this.formValid()">Send an email</button>
   </div>
-  <div class="socials-container" data-aos="flip-up" data-aos-duration="2000">
+  <div pAnimateOnScroll class="socials-container animation-duration-1000" enterClass="fadeindown">
     <jax-download-button [fileName]="'jaxonHoffmanResume'"
                         [label]="'Jax\'s Resume'" 
                         [path]="'/assets/files/resume.pdf'">
@@ -15,10 +15,15 @@
 </ng-template>
 
 <ng-template #header>
-  <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="-350" class="screen-header">Get In Touch</p>
+  <p pAnimateOnScroll class="screen-header 
+            animation-duration-1000 animation-duration-500 
+            animation-ease-in"
+      enterClass="fadeindown" leaveClass="fadeoutup">
+    Get In Touch
+  </p>
 </ng-template>
 
-<div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-offset="-200" style="height: 100vh;">
+<div >
   <jax-screen-container
     [header]="header"
     [content]="content">

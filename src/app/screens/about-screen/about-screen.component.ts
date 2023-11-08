@@ -11,13 +11,13 @@ import { Router } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ScreenContainerComponent } from 'src/app/components/screen-container/screen-container.component';
 import { ScrollSnapService } from 'src/app/services/scroll-snap/scroll-snap.service';
-import Aos from 'aos';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   encapsulation: ViewEncapsulation.None,
   selector: 'jax-about-screen',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatTabsModule, MatSidenavModule, MatIconModule, PortfolioDrawerComponent, AboutCardComponent, IconButtonComponent, ScreenContainerComponent],
+  imports: [CommonModule, MatButtonModule, MatTabsModule, MatSidenavModule, MatIconModule, PortfolioDrawerComponent, AboutCardComponent, IconButtonComponent, ScreenContainerComponent, AnimateOnScrollModule],
   templateUrl: './about-screen.component.html',
   styleUrls: ['./about-screen.component.scss']
 })
@@ -56,8 +56,8 @@ export class AboutScreenComponent implements OnInit, AfterViewInit {
   }
 
   toggleLongParagraph = () => {
+    this.scrollSnapService.scrollToElementWithOffset('dayInTheOffice', -150);
     this.showLongParagraph = !this.showLongParagraph;
     this.scrollSnapService.scrollToElementWithOffset('dayInTheOffice', -150);
-    Aos.refreshHard()
   }
 }

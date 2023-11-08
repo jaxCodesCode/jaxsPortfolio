@@ -11,6 +11,7 @@ import { EducationalScreenComponent } from 'src/app/screens/educational-screen/e
 import { ProfessionalScreenComponent } from 'src/app/screens/professional-screen/professional-screen.component';
 import { TouchScreenComponent } from 'src/app/screens/touch-screen/touch-screen.component';
 import { ScrollSnapService } from 'src/app/services/scroll-snap/scroll-snap.service';
+import { PersonalScreenComponent } from 'src/app/screens/personal-screen/personal-screen.component';
 
 @Component({
   selector: 'jax-drawer-container',
@@ -19,6 +20,7 @@ import { ScrollSnapService } from 'src/app/services/scroll-snap/scroll-snap.serv
     PortfolioDrawerComponent, RouterModule, AboutScreenComponent, 
     ProfessionalScreenComponent, 
     EducationalScreenComponent, 
+    PersonalScreenComponent,
     TouchScreenComponent],
   templateUrl: './drawer-container.component.html',
   styleUrls: ['./drawer-container.component.scss'],
@@ -35,11 +37,17 @@ export class DrawerContainerComponent implements AfterViewInit {
     this.scrollSnapService.registerElement('about', document.getElementById('about'))
     this.scrollSnapService.registerElement('professional', document.getElementById('professional'))
     this.scrollSnapService.registerElement('educational', document.getElementById('educational'))
+    this.scrollSnapService.registerElement('personal', document.getElementById('personal'))
     this.scrollSnapService.registerElement('touch', document.getElementById('touch'))   
   }
 
   closeDrawer = () => {
     if (this.drawer)
       this.drawer.close();
+  }
+
+  goToLanding = () => {
+    this.closeDrawer();
+    this.scrollSnapService.scrollToElement('landing');
   }
 }

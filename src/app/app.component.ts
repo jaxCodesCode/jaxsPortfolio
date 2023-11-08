@@ -6,6 +6,7 @@ import { TouchScreenComponent } from './screens/touch-screen/touch-screen.compon
 import { ScrollSnapService } from './services/scroll-snap/scroll-snap.service';
 import Aos from 'aos';
 import { DrawerContainerComponent } from './components/drawer-container/drawer-container.component';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
     selector: 'jax-root',
@@ -15,7 +16,8 @@ import { DrawerContainerComponent } from './components/drawer-container/drawer-c
     imports: [
       CommonModule, 
       LandingScreenComponent,
-      DrawerContainerComponent
+      DrawerContainerComponent,
+      AnimateOnScrollModule 
     ],
 })
 export class AppComponent implements OnInit, AfterViewInit {
@@ -28,7 +30,11 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.iconService.registerIcons();
-    this.scrollSnapService.registerElement('landing', document.getElementById('landing'))
+    this.scrollSnapService.registerElement('landing', document.getElementById('landing'));
+    history.scrollRestoration = 'manual'
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
   }
 
   ngAfterViewInit(): void {
