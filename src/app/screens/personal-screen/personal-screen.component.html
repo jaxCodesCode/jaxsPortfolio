@@ -1,0 +1,19 @@
+<ng-template #header>
+  <p pAnimateOnScroll class="screen-header 
+                            animation-duration-1000
+                            animation-ease-in"
+                            enterClass="fadeindown" leaveClass="fadeoutup">Personal Development</p>
+</ng-template>
+
+<ng-template #content>
+  <div class="applications">
+    <div *ngFor="let application of applications">
+      <jax-application [application]="application"></jax-application>
+    </div>
+  </div>
+</ng-template>
+
+<jax-screen-container
+  [header]="header"
+  [content]="content">
+</jax-screen-container>

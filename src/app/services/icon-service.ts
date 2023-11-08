@@ -40,5 +40,6 @@ export enum Icons {
   GeneralMotors = 'gm',
   ForwardArrow = 'forward',
   BackwardArrow = 'backward',
-  EmailJS = 'emailjs'
+  EmailJS = 'emailjs',
+  Link = 'link'
 }
