@@ -1,17 +1,16 @@
 <div class="drawer-container">
   <div class="header">
     <div class="pages">
-      <jax-sidenav-link displayText="About" route="portfolio/about"></jax-sidenav-link>
-      <jax-sidenav-link displayText="Educational Experience" route="portfolio/educational-experience"></jax-sidenav-link>
-      <jax-sidenav-link displayText="Professional Experience" route="portfolio/professional-experience"></jax-sidenav-link>
-      <jax-sidenav-link displayText="Get In Touch" route="portfolio/get-in-touch"></jax-sidenav-link>
+      <jax-sidenav-link displayText="About" route="about"></jax-sidenav-link>
+      <jax-sidenav-link displayText="Professional Experience" route="professional"></jax-sidenav-link>
+      <jax-sidenav-link displayText="Get In Touch" route="touch"></jax-sidenav-link>
     </div>
     <button mat-icon-button (click)="closeDrawer()">
       <mat-icon>clear</mat-icon>
     </button>
   </div>
   
-  <div class="footer">
+  <div class="footer" (click)="goToLanding()">
     <div>
       <mat-icon>remove</mat-icon>
     </div>

@@ -1,5 +1,7 @@
 <div class="screen-container">
-  <p class="screen-header">{{header}}</p>
+  <div>
+    <ng-template [ngTemplateOutlet]="header"></ng-template>
+  </div>
   <div class="screen-content-container">
     <ng-template [ngTemplateOutlet]="content"></ng-template>
   </div>

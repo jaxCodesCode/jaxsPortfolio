@@ -1,6 +1,13 @@
 @import 'colors';
 
 .construction-container {
+  display: flex;
+  justify-content: center;
+  min-width: 50vw;
+  height: 50vh;
+}
+
+.construction-content {
   align-items: center;
   background-color: rgba($color: map-get($map: $dark-palette, $key: purple-pale), $alpha: .75);
   border-radius: 0.5rem;
@@ -10,10 +17,15 @@
   justify-content: center;
   margin-top: 1rem;
   padding: 2rem 0.5rem;
-  max-width: 50vw;
   text-align: center;
 
   jax-icon-button {
     margin-top: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .construction-container {
+    min-width: 80%;
   }
 }

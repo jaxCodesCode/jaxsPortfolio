@@ -4,11 +4,22 @@
   </mat-drawer>
 
   <div class="drawer-sidenav-content">
-    <button mat-icon-button class="menu-button" [hidden]="drawer.opened" (click)="drawer.toggle()">
-      <mat-icon class="icon-l">menu</mat-icon>
-    </button>
+    <mat-toolbar>
+      <button mat-icon-button class="menu-button" [hidden]="drawer.opened" (click)="drawer.toggle()">
+        <mat-icon class="icon-l">menu</mat-icon>
+      </button>
+      <span class="application-name" (click)="this.goToLanding()">JaxsPortfolio</span>
+    </mat-toolbar>
     <div class="content-container" (click)="this.closeDrawer()">
-      <router-outlet></router-outlet>
+      <div id='about' style="scroll-snap-align: start; scroll-margin-top: 10vh;">
+        <jax-about-screen></jax-about-screen>
+      </div>
+      <div id='professional' style="scroll-snap-align: start; scroll-margin-top: 10vh;">
+        <jax-professional-screen></jax-professional-screen>
+      </div>
+      <div id='touch' style="scroll-snap-align: start;">
+        <jax-touch-screen></jax-touch-screen>
+      </div>
     </div>
   </div>
 </mat-drawer-container>

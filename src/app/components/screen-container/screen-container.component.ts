@@ -1,5 +1,6 @@
-import { Component, TemplateRef, Input } from '@angular/core';
+import { Component, TemplateRef, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { UtilService } from 'src/app/services/util/util.service';
 
 @Component({
   selector: 'jax-screen-container',
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ScreenContainerComponent {
   @Input()
-  header!: string;
+  header!: TemplateRef<Component>;
 
   @Input()
   content!: TemplateRef<Component>;

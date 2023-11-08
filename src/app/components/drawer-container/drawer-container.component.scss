@@ -1,44 +1,41 @@
 @import 'colors';
 
+.application-name {
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
 .content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1 1 auto;
   align-items: stretch;
-  margin-right: 2rem;
+  position: relative;
+  margin-top: 10vh;
 }
 
 .drawer-container {
-  height: 100%;
   background-color: map-get($map: $dark-palette, $key: purple);
 }
 
 .drawer-sidenav-content {
   background-color: map-get($map: $dark-palette, $key: purple-dark);;
   display: flex;
-  margin: 0.75rem 0;
-  padding-top: 0.75rem;
+  flex-direction: column;
 }
 
 .drawer-sidenav {
   background-color: map-get($map: $dark-palette, $key: purple);
   padding: 0.5rem;
+  height: 100%;
+  position: fixed;
 }
 
 .icon-l {
-  color: map-get($map: $dark-palette, $key: purple);;
-  transform: scale(2);
-}
-
-.mat-mdc-icon-button {
-  transform: scale(2);
-
-  .mat-mdc-button-ripple {
-    transform: scale(2);
-  }
+  color: map-get($map: $dark-palette, $key: purple-dark);
 }
 
 .menu-button {
-  margin: 1rem 1rem 0 2.5rem;
+  margin: 0 1rem 0 0;
 }

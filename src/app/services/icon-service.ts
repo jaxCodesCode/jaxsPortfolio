@@ -24,6 +24,7 @@ export class IconService {
 }
 
 export enum Icons {
+  Bootstrap = 'ng-bootstrap',
   GitHub = 'github',
   Gmail = 'gmail',
   LinkedIn = 'linkedin',
@@ -33,8 +34,11 @@ export enum Icons {
   Rose = 'rose',
   Quarkus = 'quarkus',
   Angular = 'angular',
+  AngularColored = 'angular-colored',
+  AngularMaterial = 'material',
   SpringBoot = 'spring', 
   GeneralMotors = 'gm',
   ForwardArrow = 'forward',
-  BackwardArrow = 'backward'
+  BackwardArrow = 'backward',
+  EmailJS = 'emailjs'
 }

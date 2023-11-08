@@ -1,6 +1,6 @@
 <ng-template #content>
   <div class="job-container" *ngFor="let job of jobs">
-    <div class="job-intro">
+    <div pAnimateOnScroll class="job-intro animation-duration-1000 animation-ease-out" enterClass="fadeinright">
       <div class="intro-header">
         <mat-icon [svgIcon]="'gm'" class="icon"></mat-icon>
         <div class="intro-header-text">
@@ -15,7 +15,7 @@
         </span>
       </div>
     </div>
-    <div class="job-detail">
+    <div pAnimateOnScroll class="job-detail animation-duration-2000 animation-ease-out" enterClass="fadeinleft">
       <mat-stepper orientation="vertical" [linear]="false">
       <ng-template matStepperIcon="edit">
         <mat-icon>circle</mat-icon>
@@ -37,7 +37,7 @@
     </div>
   </div>
   
-  <div class="recognition-container">
+  <div pAnimateOnScroll class="recognition-container animation-duration-2000" enterClass="zoomin">
     <div class="recognition-header">
       Peer Recognitions
     </div>
@@ -66,7 +66,11 @@
   </div>
 </ng-template>
 
+<ng-template #header>
+  <p pAnimateOnScroll class="screen-header animation-duration-1000" enterClass="fadeindown">Professional Experience</p>
+</ng-template>
+
 <jax-screen-container
-  header="Professional Experience"
+  [header]="header"
   [content]="content">
 </jax-screen-container>
