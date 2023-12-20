@@ -12,6 +12,7 @@ import { ProfessionalScreenComponent } from 'src/app/screens/professional-screen
 import { TouchScreenComponent } from 'src/app/screens/touch-screen/touch-screen.component';
 import { ScrollSnapService } from 'src/app/services/scroll-snap/scroll-snap.service';
 import { PersonalScreenComponent } from 'src/app/screens/personal-screen/personal-screen.component';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'jax-drawer-container',
@@ -21,7 +22,7 @@ import { PersonalScreenComponent } from 'src/app/screens/personal-screen/persona
     ProfessionalScreenComponent, 
     EducationalScreenComponent, 
     PersonalScreenComponent,
-    TouchScreenComponent],
+    TouchScreenComponent, AnimateOnScrollModule],
   templateUrl: './drawer-container.component.html',
   styleUrls: ['./drawer-container.component.scss'],
 })

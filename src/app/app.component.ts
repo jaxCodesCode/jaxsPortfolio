@@ -32,7 +32,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.iconService.registerIcons();
     this.scrollSnapService.registerElement('landing', document.getElementById('landing'));
     history.scrollRestoration = 'manual'
-    window.onbeforeunload = function () {
+    window.onunload = function () {
       window.scrollTo(0, 0);
     };
   }
