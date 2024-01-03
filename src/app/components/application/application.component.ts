@@ -4,12 +4,13 @@ import { Showcase } from 'src/app/model/showcase';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { IconLinkComponent } from '../icon-link/icon-link.component';
 
 @Component({
   encapsulation: ViewEncapsulation.ShadowDom,
   selector: 'jax-application',
   standalone: true,
-  imports: [CommonModule, MatDividerModule, MatIconModule, AnimateOnScrollModule],
+  imports: [CommonModule, MatDividerModule, MatIconModule, IconLinkComponent, AnimateOnScrollModule],
   templateUrl: './application.component.html',
   styleUrls: ['./application.component.scss']
 })

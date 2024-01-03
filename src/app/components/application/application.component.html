@@ -1,25 +1,20 @@
-<div pAnimateOnScroll class="animation-duration-1000 animation-ease-in jax-application-container" enterClass="fadeindown">
-  <div class="preview-container">
-    {{application.projectName}}
-    <img [src]="this.getImgUrl()" (click)="openInNewTab()"/>
-  </div>
-  <div class="description-container">
-    <mat-divider [vertical]="true"></mat-divider>
-    <div class="application-description" [innerHTML]="this.application.description"></div>
-    <mat-divider [vertical]="true"></mat-divider>
-    <div class="application-links-container">
-      <div>
-        <mat-icon [svgIcon]="'link'"></mat-icon>
-        <a [href]="this.application.projectUrl" target="_blank">
-          Take Me There
-        </a>
-      </div>
-      <div>
-        <mat-icon svgIcon="github"></mat-icon>
-        <a [href]="this.application.githubUrl" target="_blank">
-          GitHub URL
-        </a>
+  <div class="jax-application-container">
+    <div pAnimateOnScroll class="preview-container animation-duration-2000 animation-ease-in" enterClass="fadein" leaveClass="fadeout">
+      {{application.projectName}}
+      <img [src]="this.getImgUrl()" (click)="openInNewTab()"/>
+    </div>
+    <div pAnimateOnScroll class="description-container animation-duration-2000 animation-ease-in" enterClass="fadeinleft" leaveClass="fadoutleft">
+      <div class="application-description" [innerHTML]="this.application.description"></div>
+      <mat-divider [vertical]="true"></mat-divider>
+      <div class="application-links-container">
+        <jax-icon-link [href]="this.application.projectUrl"
+                      iconSVG="link"
+                      label="Take Me There">
+        </jax-icon-link>
+        <jax-icon-link [href]="this.application.githubUrl"
+                      iconSVG="github"
+                      label="GitHub URL">
+        </jax-icon-link>
       </div>
     </div>
   </div>
-</div>
