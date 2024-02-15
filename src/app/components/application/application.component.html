@@ -1,9 +1,9 @@
   <div class="jax-application-container">
-    <div pAnimateOnScroll class="preview-container animation-duration-2000 animation-ease-in" enterClass="fadein" leaveClass="fadeout">
+    <div class="preview-container">
       {{application.projectName}}
       <img [src]="this.getImgUrl()" (click)="openInNewTab()"/>
     </div>
-    <div pAnimateOnScroll class="description-container animation-duration-2000 animation-ease-in" enterClass="fadeinleft" leaveClass="fadoutleft">
+    <div class="description-container">
       <div class="application-description" [innerHTML]="this.application.description"></div>
       <mat-divider [vertical]="true"></mat-divider>
       <div class="application-links-container">

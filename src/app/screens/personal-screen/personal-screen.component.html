@@ -7,7 +7,12 @@
 
 <ng-template #content>
   <div class="applications">
-    <div *ngFor="let application of applications">
+    <div *ngFor="let application of applications"
+    pAnimateOnScroll class=" 
+    animation-duration-2000
+    animation-ease-in-out"
+    enterClass="fadeindown" leaveClass="fadeoutup"
+    >
       <jax-application [application]="application"></jax-application>
     </div>
   </div>
